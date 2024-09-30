@@ -1,0 +1,10 @@
+.untane{
+ border-radius: 50%;
+ margin: 15px auto;
+ display: block;
+ border: solid 5px rgb(253, 197, 123);
+ box-shadow: 0 0 10px yellow;
+ height: 200px;
+ width: 200px;
+ object-fit: cover;
+}

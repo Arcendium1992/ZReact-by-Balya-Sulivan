@@ -8,3 +8,57 @@
  width: 200px;
  object-fit: cover;
 }
+
+.education-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .education-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default 1 kolom di mobile */
+    gap: 20px;
+  }
+  
+  .education-card {
+    background-color: #ddb466;
+    padding: 20px;
+    border: solid 5px rgb(253, 197, 123);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgb(255, 219, 101);
+    text-align: center;
+  }
+  
+  .level {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .school-name, .year {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Media Query untuk layar ukuran medium */
+  @media (min-width: 768px) {
+    .education-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 kolom di layar medium */
+    }
+  }
+  
+  /* Media Query untuk layar ukuran besar (desktop) */
+  @media (min-width: 1024px) {
+    .education-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 kolom di layar desktop */
+    }
+  }
+  

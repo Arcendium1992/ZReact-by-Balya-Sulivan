@@ -8,11 +8,17 @@
  width: 200px;
  object-fit: cover;
 }
-
+.bg{
+  background-color: azure;
+}
 .education-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+  }
+  .BarisRiwayatKerja{
+    border: solid 5px rgb(253, 197, 123);
+    box-shadow: 0 0 10px yellow;
   }
   
   .title {

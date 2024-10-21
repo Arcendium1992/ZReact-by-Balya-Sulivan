@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import RiwayatKerja from './components/riwayatKerja';
 import RiwayatPendidikan from './components/riwayatPendidikan';
 import FavColor from './components/favColor';
-import Form from './components/quiz';
+
 export default function MyIam() {
   return (
     <section className="bg">
@@ -12,7 +12,6 @@ export default function MyIam() {
       <RiwayatKerja/>
       <RiwayatPendidikan/>
       <FavColor/>
-      <Form/>
     </section>
   );
 }

@@ -9,7 +9,7 @@
  object-fit: cover;
 }
 .bg{
-  background-color: azure;
+  background-color: rgb(208, 244, 244);
 }
 .education-container {
     max-width: 1200px;

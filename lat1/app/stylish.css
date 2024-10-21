@@ -9,7 +9,7 @@
  object-fit: cover;
 }
 .bg{
-  background-color: rgb(208, 244, 244);
+  background-color: rgb(117, 146, 146);
 }
 .education-container {
     max-width: 1200px;
@@ -72,5 +72,53 @@
     .education-grid {
       grid-template-columns: repeat(3, 1fr); /* 3 kolom di layar desktop */
     }
+  }
+  
+  .contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .contact-form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 2px solid yellow;
+    border-radius: 4px;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .contact-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Tambahkan CSS untuk font hitam */
+  .submitted-data {
+    color: black;
   }
   

@@ -1,87 +1,76 @@
 "use client";
 import { useState } from 'react';
 
-export default function Form() {
-  const [answer, setAnswer] = useState('');
-  const [error, setError] = useState(null);
-  const [status, setStatus] = useState('typing');
+export default function ContactForm() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [submittedData, setSubmittedData] = useState(null);
 
-  if (status === 'success') {
-    return <h1>That's right!</h1>
-  }
-
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
-    setStatus('submitting');
-    try {
-      await submitForm(answer);
-      setStatus('success');
-    } catch (err) {
-      setStatus('typing');
-      setError(err);
-    }
+    // Simulasi submit tanpa memasukkan ke database
+    setSubmittedData(`Nama: ${name}, Email: ${email}, Pesan: ${message}`);
+    
+    // Kosongkan kolom input setelah submit
+    setName('');
+    setEmail('');
+    setMessage('');
   }
 
-  function handleTextareaChange(e) {
-    setAnswer(e.target.value);
+  function handleClear() {
+    setName('');
+    setEmail('');
+    setMessage('');
+    setSubmittedData(null);
   }
 
   return (
-    <>
-      <h2 className='text-black text-center'>Apa quiz</h2>
-      <p className='text-black text-center'>
-        apa kalimat yang digunakan untuk bertanya apa?
-      </p>
-      <form onSubmit={handleSubmit}>
-        <textarea
-          value={answer}
-          onChange={handleTextareaChange}
-          disabled={status === 'submitting'}
-        />
-        <br />
-        <button disabled={
-          answer.length === 0 ||
-          status === 'submitting'
-        }className='text-black text-center'>
-          Submit
-        </button>
-        {error !== null &&
-          <p className="Error">
-            {error.message}
-          </p>
-        }
-      </form>
-    </>
+    <div className='contact-form'>
+      {submittedData ? (
+        <h2>{submittedData}, data diatas akan segera di input ke database. terimakasih!</h2>
+      ) : (
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>
+              Nama:
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              Email:
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              Pesan:
+              <textarea
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              />
+            </label>
+          </div>
+          <button type="submit" className='submit-button'>
+            Submit
+          </button>
+          <button type="button" onClick={handleClear} className='clear-button'>
+            Clear
+          </button>
+        </form>
+      )}
+    </div>
   );
 }
-
-function handleSubmit() {
-    const answerInput = document.getElementById('answerInput');
-    const answer = answerInput.value;
-    
-    submitForm(answer).catch((error) => {
-      // Jika salah, ubah border menjadi merah
-      answerInput.style.border = '2px solid red';
-      console.error(error.message);
-    });
-  }
-  
-  function submitForm(answer) {
-    // Mengambil elemen untuk menampilkan pesan
-    const messageElement = document.getElementById('message');
-  
-    // Pretend it's hitting the network.
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        let shouldError = answer.toLowerCase() !== 'apa';
-        if (shouldError) {
-          messageElement.textContent = 'Good guess but a wrong answer. Try again!';
-          reject(new Error('Good guess but a wrong answer. Try again!'));
-        } else {
-          messageElement.textContent = 'Correct answer!';
-          resolve();
-        }
-      }, 1500);
-    });
-  }
-  

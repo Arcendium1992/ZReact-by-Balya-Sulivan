@@ -27,10 +27,10 @@ export default function RiwayatKerja(){
     return (
         <div>
             <h1 className="text-black font-bold judul mt-10 mb-10 ">Riwayat Pekerjaan</h1>
-        <BarisRiwayatKerja tahun_kerja="2003 - 2010" instansi="Rumah Sakit Hasan Sadikin" bekerja_sebagai="Dokter Spesialis Mobile Legend" />
-        <BarisRiwayatKerja tahun_kerja="2010 - 2012" instansi="Polda Jabar" bekerja_sebagai="Direktur" />
-        <BarisRiwayatKerja tahun_kerja="2013 - 2019" instansi="Masoem University" bekerja_sebagai="Dosen Bahasa Bulan" />
-        <BarisRiwayatKerja tahun_kerja="2019 - Sekarang" instansi="N.A.S.A" bekerja_sebagai="Astronot Matahari" />
+        <BarisRiwayatKerja tahun_kerja="2003 - 2010" instansi="Rumah Sakit Fatmawati" bekerja_sebagai="Dokter Spesialis Kekinian" />
+        <BarisRiwayatKerja tahun_kerja="2010 - 2012" instansi="Cv Sasan Karya" bekerja_sebagai="Gambar" />
+        <BarisRiwayatKerja tahun_kerja="2013 - 2019" instansi="Universitas PAdjajaran" bekerja_sebagai="Kepala" />
+        <BarisRiwayatKerja tahun_kerja="2019 - Sekarang" instansi="PT Ayakin" bekerja_sebagai="Pemilik" />
         </div>
     );
 }

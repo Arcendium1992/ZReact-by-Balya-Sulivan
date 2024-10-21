@@ -29,9 +29,10 @@ export default function RiwayatPendidikan(){
     return (
         <div>
         <h1 className="font-bold judul mt-10 mb-10">Riwayat Pendidikan</h1>
-        <BarisRiwayat jenjang="SD" sekolah="SDN Karapiak 2" tahun="2010 - 2016" />
-        <BarisRiwayat jenjang="SMP" sekolah="SMPN 1 Cimanggung" tahun="2016 - 2019" />
-        <BarisRiwayat jenjang="SMA" sekolah="SMAN Yadika Cicalengka" tahun="2019 - 2022" />
+        <BarisRiwayat jenjang="TK" sekolah="TK Amalia B" tahun="2009 - 2010" />
+        <BarisRiwayat jenjang="SD" sekolah="SD Asy-Syifa 1" tahun="2010 - 2016" />
+        <BarisRiwayat jenjang="SMP" sekolah="SMP Genrus Nusantara Boarding School" tahun="2016 - 2019" />
+        <BarisRiwayat jenjang="SMA" sekolah="SMAN 6 Bandung" tahun="2019 - 2022" />
         <BarisRiwayat jenjang="Kuliah" sekolah="Universitas Masoem" tahun="2022 - Sekarang" />
         </div>
     );
